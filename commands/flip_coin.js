@@ -19,7 +19,7 @@ module.exports.run = async (bot, message , args) => {
     if(bet > ucoins) return message.channel.send("You don't have that many coins!");
     if(bet < 0) return message.channel.send("Your bet can't be lower than 0.");
 
-    let result = Math.floor(Math.random() * flip.length);
+    let result = Math.floor(Math.random() * 2);
 
     if (predicion !== flip[result]) {
         coins[message.author.id].coins = ucoins - bet
