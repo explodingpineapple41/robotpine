@@ -25,7 +25,7 @@ module.exports.run = async (bot, message , args) => {
         coins[message.author.id].coins = ucoins - bet
         message.channel.send(`You lost the coin toss and lost ${bet} coins.`)
     } else {
-        coins[message.author.id].coins = ucoins + bet
+        coins[message.author.id].coins = ucoins + coins[message.author.id].coins
         message.channel.send(`You won the coin toss and gained ${bet} coins.` ) 
         
     }
