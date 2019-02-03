@@ -10,7 +10,7 @@ module.exports.run = async (bot, message , args) => {
     let predicion = args[0];
     let bet = args[1];
     let flip = ["heads", "tails"];
-    if(message.channel.name !== "flip-a-coin") return message.channel.send("This isn't the place to gamble!").then(msg => {msg.delete(5000)});
+    if(message.channel.name !== "flip-a-coin" && message.channel.name !== "testing") return message.channel.send("This isn't the place to gamble!").then(msg => {msg.delete(5000)});
     if(!predicion) return message.channel.send("Please make a prediction.");
     if(!flip.includes(predicion.toLowerCase())) return message.channel.send("Your guess can only be 'heads' or 'tails'.");
     if(!bet) return message.channel.send("Please bet a specific amount.");
