@@ -4,7 +4,7 @@ module.exports.run = async(bot, message, args) => {
 if(!args[2]) return message.channel.send("Please ask a full question!");
 let replies = ["100%", "70%", "30%", "0%", "50%","SYNTAX_ERROR"];
 
-let result = Math.floor((Math.random() * replies.length));
+let result = Math.floor((Math.random() * 6));
 let question = args.slice(1).join(" ");
 
 let bembed = new Discord.RichEmbed()
